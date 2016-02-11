@@ -1,11 +1,10 @@
 ---
-  title: Sample Home Page
+  title: Home Page
   body_classes: home
   meta_description:
   meta_keywords:
 ---
 
-%main{role: 'main'}
-  %article
-    %h1= data.page.title
-    %p= lorem.paragraph
+%main.main-wraper{role: 'main'}
+  = partial "login"
+  .root-footer

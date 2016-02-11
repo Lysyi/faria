@@ -7,6 +7,7 @@
 
 @import compass
 @import compass/reset
+@import compass/layout
 @import compass/css3
 @import compass/typography
 
@@ -30,6 +31,7 @@
   font-weight: $f-weight
   line-height: $f-height
 
++sticky-footer(40px, ".main-wraper", ".root-footer", ".footer")
 
 body  
   +font-mix(16px, 200, 25px)
@@ -40,6 +42,10 @@ body
 footer
   +font-mix(21px, 200, 30px)
   color: #fff
+  .copy--block
+    +float-left
+  .policies--block
+    +float-right
 
 h2
   +font-mix(32px, 400, 51px)
