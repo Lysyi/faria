@@ -1,0 +1,4 @@
+build
+Gemfile.lock
+app/images/sprites/*.png
+.DS_Store
