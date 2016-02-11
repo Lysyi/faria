@@ -5,12 +5,14 @@
   Author URI:   <%= data.config.source.author.uri %>
   */
 
-@import "compass"
+@import compass
+@import compass/reset
+@import compass/css3
+@import compass/typography
 
-@import "compass/reset"
-
-@import "compass/utilities/sprites"
+@import compass/utilities/sprites
 @import "icons/*.png"
+
 @include all-icons-sprites(true)
 
 .browser-upgrade
@@ -21,3 +23,33 @@
   text-align: center
   a
     text-decoration: underline
+
+
+=font-mix($f-size, $f-weight, $f-height)
+  font-size:   $f-size
+  font-weight: $f-weight
+  line-height: $f-height
+
+
+body  
+  +font-mix(16px, 200, 25px)
+  font-family: Open Sans, sans-serif
+  color: #293041
+  background: url(../images/main-bg.jpg) no-repeat center center fixed
+
+footer
+  +font-mix(21px, 200, 30px)
+  color: #fff
+
+h2
+  +font-mix(32px, 400, 51px)
+
+h3
+  +font-mix(29px, 300, 38px)
+
+p
+  +font-mix(26px, 200, 35px)
+
+label
+  +font-mix(24px, 200, 33px)
+  color: #859bbb
