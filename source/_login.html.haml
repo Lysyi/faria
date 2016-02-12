@@ -6,3 +6,13 @@
     .login--content
       %h3 Email Authentication
       %p Please sign into #{content_tag(:strong, "ManageBac")} using your old email address and existing password to authenticate your new you email address.
+    %form.login--form
+      %label.login--label
+        Old Email Address
+      .email--input
+        %input.login--input{:type => "text", :placeholder => "Email"}
+      %label.login--label
+        Existing Password  
+      .password--input
+        %input.login--input{:type => "password", :placeholder => "Password"}  
+      %input.login--button{:type => "submit", :value => "Authenticate Account"}

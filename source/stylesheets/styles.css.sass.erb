@@ -31,7 +31,13 @@
   font-weight: $f-weight
   line-height: $f-height
 
+=vertical-align-mix($position: relative)
+  position: $position
+  top: 50%
+  transform: translateY(-50%)
+
 +sticky-footer(40px, ".main-wraper", ".root-footer", ".footer")
+
 
 body  
   +font-mix(16px, 200, 25px)
@@ -65,6 +71,7 @@ label
   +font-mix(24px, 200, 33px)
   color: #859bbb
 
+
 .login-container
   position: absolute
   width: 100%
@@ -72,13 +79,11 @@ label
   text-align: center
   .login--block
     +box-sizing(border-box)
+    +vertical-align-mix()
     display: inline-block
-    position: relative
     width: 600px
     min-height: 750px
-    top: 50%
     background: #fff
-    transform: translateY(-50%)
     text-align: left
 
 .login--header
@@ -92,11 +97,62 @@ label
   h2
     padding-top: 10px
 
-.login--content 
+.login--content
+  margin-bottom: 26px 
   padding: 0 39px
   h3
     padding-bottom: 24px
   p
     word-spacing: 3px
+  
+.login--form
+  padding: 0 40px
+  .login--label
+    display: block
+    margin-bottom: 14px
+  .login--input
+    +box-sizing(border-box)
+    +border-radius(5px)
+    +background-image(linear-gradient(#e1e1e1, #f9f9f9 5%, #fdfdfd 95%))
+    +font-mix(26px, 200, normal)
+    width: 100%
+    margin-bottom: 35px
+    padding: 10px 18px
+    border: solid #e1e1e1 1px
+    color: #a6bedc  
+  .login--button
+    +border-radius(5px)
+    +box-shadow(#b1b1b1 0 1px 10px)
+    +background-image(linear-gradient(#5f9bff, #3479eb))
+    +font-mix(28px, 200, 28px)
+    width: 100%
+    margin-top: 5px
+    padding: 26px 0
+    border: none
+    color: #fff
+    text-shadow: 0 1px 2px #293041
+    &:hover
+      +background-image(linear-gradient(#3479eb, #5f9bff))
+
+  .email--input
+    position: relative
+    &:after
+      @extend .icons-envelope
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      margin: 20px 20px 0 0 
+
+  .password--input
+    position: relative
+    &:after
+      @extend .icons-lock
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      margin: 15px 20px 0 0 
+
   
 
