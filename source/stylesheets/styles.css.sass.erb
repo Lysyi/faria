@@ -37,10 +37,12 @@ body
   +font-mix(16px, 200, 25px)
   font-family: Open Sans, sans-serif
   color: #293041
-  background: url(../images/main-bg.jpg) no-repeat center center fixed
+  background: url(../images/main-bg.jpg) no-repeat center center
+  background-size: cover
 
 footer
-  +font-mix(21px, 200, 30px)
+  +font-mix(20px, 200, 30px)
+  padding: 0 20px
   color: #fff
   .copy--block
     +float-left
@@ -48,14 +50,48 @@ footer
     +float-right
 
 h2
-  +font-mix(32px, 400, 51px)
+  +font-mix(42px, 400, 51px)
 
 h3
-  +font-mix(29px, 300, 38px)
+  +font-mix(29px, 400, 38px)
 
 p
   +font-mix(26px, 200, 35px)
 
+b, strong
+  font-weight: 400
+
 label
   +font-mix(24px, 200, 33px)
   color: #859bbb
+
+.login-container
+  position: absolute
+  width: 100%
+  height: 100%
+  text-align: center
+  .login--block
+    +box-sizing(border-box)
+    display: inline-block
+    position: relative
+    width: 600px
+    min-height: 750px
+    top: 50%
+    background: #fff
+    transform: translateY(-50%)
+    text-align: left
+
+.login--header
+  +clearfix
+  margin-bottom: 30px
+  padding: 25px 35px 21px 35px
+  border-bottom: solid #d9e7f7 1px
+  .icon
+    +float-left
+    margin-right: 16px
+  h2
+    padding-top: 10px
+
+.login--content 
+  padding: 0 35px 21px 35px
+  color: red
